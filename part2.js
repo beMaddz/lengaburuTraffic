@@ -1,9 +1,14 @@
+var prop = require("/home/madhuparna/geektrustSolutions/problm3/part1.js");
+var Orbits = prop.path();
+var Vehicles = prop.transport();
+var Climate = prop.weather();
+
 function calculate(weatherCondition, orbit1, orbit2, trafficSpeed1, trafficSpeed2) {
   var orbitChosen, weatherDetails, vehicleList;
-  weatherDetails = climate[weatherCondition];
-  var path1 = orbits[orbit1];
+  weatherDetails = Climate[weatherCondition];
+  var path1 = Orbits[orbit1];
   path1.actualTrafficSpeed = trafficSpeed1;
-  var path2 = orbits[orbit2];
+  var path2 = Orbits[orbit2];
   path2.actualTrafficSpeed = trafficSpeed2;
   orbitChosen = Math.max(path1.actualTrafficSpeed, path2.actualTrafficSpeed) === path1.actualTrafficSpeed ? path1 : path2;
 
@@ -31,7 +36,7 @@ function calculate(weatherCondition, orbit1, orbit2, trafficSpeed1, trafficSpeed
     if(vehicleTime[t] === min)
       vehicleChosen = t;
   }
-  
+
   console.log('Vehicle ' + vehicleChosen + ' on ' + orbitChosen.names);
 }
 calculate('Sunny', 'Orbit1', 'Orbit2', 12, 10);
