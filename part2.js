@@ -1,4 +1,4 @@
-var prop = require("/home/madhuparna/geektrustSolutions/problm3/part1.js");
+var prop = require("./part1.js");
 var Orbits = prop.path();
 var Vehicles = prop.transport();
 var Climate = prop.weather();
