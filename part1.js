@@ -2,10 +2,11 @@ var expo = module.exports = {};
 
 //constructor function for orbits.
 
-function Routes(names, distance, numCraters) {
+function Routes(names, distance, numCraters, destinations) {
   this.names = names;
   this.distance = distance;
   this.numCraters = numCraters;
+  this.destinations = destinations;
 }
 
 //constructor function for Vehicles.
@@ -26,8 +27,8 @@ function Weather(names, craterNumChange, availableTransport) {
 
 var orbit = {};  //stores the Orbit instances.
 //function to create and store objects of Orbit..
-function addRoutes(names, distance, numCraters) {
-  var route = new Routes(names, distance, numCraters);
+function addRoutes(names, distance, numCraters, destinations) {
+  var route = new Routes(names, distance, numCraters, destinations);
   orbit[route.names] = route;
 }
 
