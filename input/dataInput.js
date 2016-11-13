@@ -11,7 +11,6 @@ inputs = inputs + process.argv[i + 3];
 var inputData = inputs.split(" ");
 //reading and storing the input data for later use....
 
-
 inputExport.getInput = function() {
   return inputData;
 }
