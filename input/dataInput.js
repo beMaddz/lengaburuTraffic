@@ -1,7 +1,6 @@
 var inputExport = module.exports = {};
 //export the input....
 
-
 var inputs = "";
 for(var i = 0; i < process.argv[2] - 1; i++) {
   inputs = inputs + process.argv[i + 3];
