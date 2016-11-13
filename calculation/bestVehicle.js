@@ -1,7 +1,11 @@
 var expoFastVehicle = module.exports = {};
+//best vehicle export object.......
 
 var dataWeather = require('../lib/Weather.js');
+//import the weather details.....
+
 var dataOrbit = require('../lib/Orbits.js');
+//import the orbit detais......
 
 var weatherConditions = dataWeather.getWeather();
 var orbitCollection = dataOrbit.getOrbits();
@@ -16,6 +20,8 @@ function craterCalculation(craters, weather, changeInCrater) {
   }
   return newCraterNum;
 }
+//calculating the number of craters......
+
 
 function vehicleTime(vehicle, orbit, crater) {
   var vehicleFastest = {};
@@ -31,6 +37,8 @@ function vehicleTime(vehicle, orbit, crater) {
   vehicleFastest.fastTime = leastTime;
   return vehicleFastest;
 }
+//calculates the fastest vehicle and returns the vehicle details......
+
 
 expoFastVehicle.perfectVehicle = function(orbitName, trafficSpeed, weather) {
   var inputOrbit = orbitCollection[orbitName];
@@ -41,3 +49,4 @@ expoFastVehicle.perfectVehicle = function(orbitName, trafficSpeed, weather) {
   var chosenVehicle = vehicleTime(vehicle, inputOrbit, totalCraters);
   return chosenVehicle;
 }
+//exports the fastest vehicle details......
