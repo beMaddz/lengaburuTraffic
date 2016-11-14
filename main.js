@@ -1,4 +1,4 @@
-var data = require('./input/dataInput.js');
+var data = require('./input/readDataInput.js');
 var input = data.getInput();
 //importing the entered inputs....
 
@@ -13,10 +13,10 @@ function bestOrbit(weather, route1, route2, trafficSpeed1, trafficSpeed2) {
   //executing and storing the fastest vehicle data ........
 
   if(vehicleSpeedOrbit1.fastTime < vehicleSpeedOrbit2.fastTime) {
-    console.log(route1 + " " + vehicleSpeedOrbit1.fastName);
+    console.log("Vehicle " + vehicleSpeedOrbit1.fastName + " on " + route1);
   }
   else {
-    console.log(route2 + " " + vehicleSpeedOrbit2.fastName);
+    console.log("Vehicle  " + vehicleSpeedOrbit2.fastName + " on " + route2);
   }
   //comparing between the orbit and printing the best route.......
 
